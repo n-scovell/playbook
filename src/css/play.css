@@ -1,0 +1,258 @@
+body {
+  margin: 0px;
+  font-family: "Futura", sans-serif;
+}
+
+.playGrid {
+  padding: 0px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+}
+.playGrid .chooser {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 15px;
+  color: #333;
+  display: flex;
+}
+.playGrid .chooser p {
+  margin: 0px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transform: skew(-10deg, 0deg);
+  outline: 1px solid black;
+}
+.playGrid .chooser p:hover {
+  cursor: pointer;
+}
+.playGrid .chooser p.light {
+  background: white;
+}
+.playGrid .chooser p.dark {
+  background: #333;
+  color: white;
+}
+.playGrid .play {
+  flex: 1;
+  min-width: 65%;
+  max-width: 500px;
+  height: 450px;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px 0px;
+  gap: 1px;
+}
+.playGrid .play .row {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+.playGrid .play .row:before {
+  content: " ";
+  width: 100%;
+  height: 25px;
+  border-top: 1px dashed red;
+  position: absolute;
+  bottom: 35%;
+  left: 0px;
+}
+.playGrid .play .row .circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  font-size: 12px;
+  padding-top: 2px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  background: white;
+  transform: translate(-50%, -50%);
+}
+.playGrid .play .row .circle:hover {
+  cursor: pointer;
+}
+.playGrid .play .row .circle.qb, .playGrid .play .row .circle.sl, .playGrid .play .row .circle.wr, .playGrid .play .row .circle.cs, .playGrid .play .row .circle.rb, .playGrid .play .row .circle.QB, .playGrid .play .row .circle.SL, .playGrid .play .row .circle.WR, .playGrid .play .row .circle.CS, .playGrid .play .row .circle.RB {
+  bottom: 35%;
+}
+.playGrid .play .row .circle.halfBack, .playGrid .play .row .circle.back {
+  bottom: 15%;
+}
+.playGrid .play .row .circle.backB {
+  bottom: 5%;
+}
+.playGrid .play .row .circle.hookL:before, .playGrid .play .row .circle.hookR:before {
+  content: " ";
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background: red;
+  height: 35px;
+  width: 25px;
+  clip-path: polygon(0% 20%, 50% 0%, 54% 5%, 54% 100%, 46% 100%, 46% 5%, 10% 20%, 0% 20%);
+}
+.playGrid .play .row .circle.hookR:before {
+  clip-path: polygon(50% 0%, 100% 20%, 90% 20%, 54% 5%, 54% 100%, 46% 100%, 46% 5%);
+}
+.playGrid .play .row .circle.fly:before, .playGrid .play .row .circle.flyLong:before {
+  content: " ";
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background: red;
+  height: 95px;
+  width: 25px;
+  clip-path: polygon(0% 10%, 50% 0%, 100% 10%, 90% 10%, 54% 5%, 54% 100%, 46% 100%, 46% 5%, 10% 10%, 0% 10%);
+}
+.playGrid .play .row .circle.flyLong:before {
+  height: 170px;
+}
+.playGrid .play .row .circle.postR:before, .playGrid .play .row .circle.postL:before, .playGrid .play .row .circle.postLLong:before, .playGrid .play .row .circle.postRLong:before {
+  content: " ";
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateY(0%);
+  background: red;
+  height: 35px;
+  width: 2px;
+}
+.playGrid .play .row .circle.postR:after, .playGrid .play .row .circle.postL:after, .playGrid .play .row .circle.postLLong:after, .playGrid .play .row .circle.postRLong:after {
+  content: " ";
+  position: absolute;
+  bottom: 35px;
+  left: 117%;
+  transform: translate(-50%, 0%);
+  transform: rotate(90deg);
+  background: red;
+  height: 55px;
+  width: 25px;
+  clip-path: polygon(0% 20%, 50% 0%, 100% 20%, 90% 20%, 54% 5%, 54% 100%, 46% 100%, 46% 5%, 10% 20%, 0% 20%);
+}
+.playGrid .play .row .circle.postLLong:before {
+  height: 75px;
+}
+.playGrid .play .row .circle.postLLong:after {
+  bottom: 75px;
+  transform: rotate(-90deg);
+  left: -114%;
+}
+.playGrid .play .row .circle.postRLong:before {
+  height: 75px;
+}
+.playGrid .play .row .circle.postRLong:after {
+  bottom: 75px;
+  transform: rotate(90deg);
+  left: 117%;
+}
+.playGrid .play .row .circle.postL:after {
+  transform: rotate(-90deg);
+  left: -114%;
+}
+.playGrid .play .row .circle.rollL:before, .playGrid .play .row .circle.rollR:before, .playGrid .play .row .circle.slantL:before, .playGrid .play .row .circle.slantR:before {
+  content: " ";
+  position: absolute;
+  bottom: -150%;
+  left: -160%;
+  transform: translate(-50%, 0%);
+  transform: rotate(-90deg);
+  background: red;
+  height: 95px;
+  width: 25px;
+  clip-path: polygon(0% 10%, 50% 0%, 100% 10%, 90% 10%, 54% 5%, 54% 70%, 46% 70%, 46% 5%, 10% 10%, 0% 10%);
+}
+.playGrid .play .row .circle.rollR:before {
+  left: 160%;
+  transform: rotate(90deg);
+}
+.playGrid .play .row .circle.slantL:before {
+  left: -65%;
+  top: -290%;
+  transform: rotate(-45deg);
+}
+.playGrid .play .row .circle.slantR:before {
+  left: 65%;
+  top: -290%;
+  transform: rotate(45deg);
+}
+.playGrid .play .line {
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  display: none;
+  bottom: 0px;
+}
+.playGrid .play h2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: auto;
+  text-align: left;
+  margin: 0px;
+  z-index: 5;
+  padding: 10px 20px;
+  text-decoration: underline;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.7);
+  background: red;
+}
+.playGrid.light {
+  background: white;
+  transition: all 1s;
+}
+.playGrid.light .play {
+  background: #fff;
+  transition: all 1s;
+}
+.playGrid.light .play h2 {
+  color: black;
+  background: #ccc;
+  transition: all 1s;
+}
+.playGrid.light .play .row:before {
+  border-top: 5px dashed red;
+}
+.playGrid.light .play .frame {
+  outline: 2px solid rgba(0, 0, 0, 0.5);
+  transition: all 1s;
+}
+.playGrid.dark {
+  background: black;
+  transition: all 1s;
+}
+.playGrid.dark .play {
+  background: black;
+  transition: all 1s;
+}
+.playGrid.dark .play h2 {
+  color: white;
+  transition: all 1s;
+}
+.playGrid.dark .play .row:before {
+  border-top: 5px dashed red;
+}
+.playGrid.dark .play .frame {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  transition: all 1s;
+}/*# sourceMappingURL=play.css.map */
