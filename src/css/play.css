@@ -1,6 +1,7 @@
 body {
   margin: 0px;
   font-family: "Futura", sans-serif;
+  background: #333;
 }
 
 .playGrid {
@@ -93,8 +94,17 @@ body {
 .playGrid .play .row .circle.qb, .playGrid .play .row .circle.sl, .playGrid .play .row .circle.wr, .playGrid .play .row .circle.cs, .playGrid .play .row .circle.rb, .playGrid .play .row .circle.QB, .playGrid .play .row .circle.SL, .playGrid .play .row .circle.WR, .playGrid .play .row .circle.CS, .playGrid .play .row .circle.RB {
   bottom: 35%;
 }
+.playGrid .play .row .circle.up {
+  bottom: 25%;
+}
 .playGrid .play .row .circle.halfBack, .playGrid .play .row .circle.back {
   bottom: 15%;
+}
+.playGrid .play .row .circle.left {
+  left: 15%;
+}
+.playGrid .play .row .circle.right {
+  left: 85%;
 }
 .playGrid .play .row .circle.backB {
   bottom: 5%;
@@ -113,7 +123,7 @@ body {
 .playGrid .play .row .circle.hookR:before {
   clip-path: polygon(50% 0%, 100% 20%, 90% 20%, 54% 5%, 54% 100%, 46% 100%, 46% 5%);
 }
-.playGrid .play .row .circle.fly:before, .playGrid .play .row .circle.flyLong:before {
+.playGrid .play .row .circle.fly:before, .playGrid .play .row .circle.flyLong:before, .playGrid .play .row .circle.f:before, .playGrid .play .row .circle.fl:before {
   content: " ";
   position: absolute;
   bottom: 115%;
@@ -124,10 +134,10 @@ body {
   width: 25px;
   clip-path: polygon(0% 10%, 50% 0%, 100% 10%, 90% 10%, 54% 5%, 54% 100%, 46% 100%, 46% 5%, 10% 10%, 0% 10%);
 }
-.playGrid .play .row .circle.flyLong:before {
+.playGrid .play .row .circle.flyLong:before, .playGrid .play .row .circle.fl:before {
   height: 170px;
 }
-.playGrid .play .row .circle.postR:before, .playGrid .play .row .circle.postL:before, .playGrid .play .row .circle.postLLong:before, .playGrid .play .row .circle.postRLong:before {
+.playGrid .play .row .circle.postR:before, .playGrid .play .row .circle.postL:before, .playGrid .play .row .circle.postLLong:before, .playGrid .play .row .circle.postRLong:before, .playGrid .play .row .circle.prl:before, .playGrid .play .row .circle.pll:before, .playGrid .play .row .circle.pr:before, .playGrid .play .row .circle.pl:before {
   content: " ";
   position: absolute;
   bottom: 115%;
@@ -137,7 +147,7 @@ body {
   height: 35px;
   width: 2px;
 }
-.playGrid .play .row .circle.postR:after, .playGrid .play .row .circle.postL:after, .playGrid .play .row .circle.postLLong:after, .playGrid .play .row .circle.postRLong:after {
+.playGrid .play .row .circle.postR:after, .playGrid .play .row .circle.postL:after, .playGrid .play .row .circle.postLLong:after, .playGrid .play .row .circle.postRLong:after, .playGrid .play .row .circle.prl:after, .playGrid .play .row .circle.pll:after, .playGrid .play .row .circle.pr:after, .playGrid .play .row .circle.pl:after {
   content: " ";
   position: absolute;
   bottom: 35px;
@@ -149,27 +159,27 @@ body {
   width: 25px;
   clip-path: polygon(0% 20%, 50% 0%, 100% 20%, 90% 20%, 54% 5%, 54% 100%, 46% 100%, 46% 5%, 10% 20%, 0% 20%);
 }
-.playGrid .play .row .circle.postLLong:before {
+.playGrid .play .row .circle.postLLong:before, .playGrid .play .row .circle.pll:before {
   height: 75px;
 }
-.playGrid .play .row .circle.postLLong:after {
+.playGrid .play .row .circle.postLLong:after, .playGrid .play .row .circle.pll:after {
   bottom: 75px;
   transform: rotate(-90deg);
   left: -114%;
 }
-.playGrid .play .row .circle.postRLong:before {
+.playGrid .play .row .circle.postRLong:before, .playGrid .play .row .circle.prl:before {
   height: 75px;
 }
-.playGrid .play .row .circle.postRLong:after {
+.playGrid .play .row .circle.postRLong:after, .playGrid .play .row .circle.prl:after {
   bottom: 75px;
   transform: rotate(90deg);
   left: 117%;
 }
-.playGrid .play .row .circle.postL:after {
+.playGrid .play .row .circle.postL:after, .playGrid .play .row .circle.pl:after {
   transform: rotate(-90deg);
   left: -114%;
 }
-.playGrid .play .row .circle.rollL:before, .playGrid .play .row .circle.rollR:before, .playGrid .play .row .circle.slantL:before, .playGrid .play .row .circle.slantR:before {
+.playGrid .play .row .circle.rollL:before, .playGrid .play .row .circle.rollR:before, .playGrid .play .row .circle.slantL:before, .playGrid .play .row .circle.slantR:before, .playGrid .play .row .circle.rl:before, .playGrid .play .row .circle.rr:before, .playGrid .play .row .circle.sl:before, .playGrid .play .row .circle.sr:before {
   content: " ";
   position: absolute;
   bottom: -150%;
@@ -181,16 +191,16 @@ body {
   width: 25px;
   clip-path: polygon(0% 10%, 50% 0%, 100% 10%, 90% 10%, 54% 5%, 54% 70%, 46% 70%, 46% 5%, 10% 10%, 0% 10%);
 }
-.playGrid .play .row .circle.rollR:before {
+.playGrid .play .row .circle.rollR:before, .playGrid .play .row .circle.rr:before {
   left: 160%;
   transform: rotate(90deg);
 }
-.playGrid .play .row .circle.slantL:before {
+.playGrid .play .row .circle.slantL:before, .playGrid .play .row .circle.sl:before {
   left: -65%;
   top: -290%;
   transform: rotate(-45deg);
 }
-.playGrid .play .row .circle.slantR:before {
+.playGrid .play .row .circle.slantR:before, .playGrid .play .row .circle.sr:before {
   left: 65%;
   top: -290%;
   transform: rotate(45deg);
@@ -255,4 +265,72 @@ body {
 .playGrid.dark .play .frame {
   outline: 2px solid rgba(255, 255, 255, 0.9);
   transition: all 1s;
+}
+
+.mainContainer {
+  width: 95%;
+  max-width: 2500px;
+  margin: auto;
+  background: #333;
+}
+.mainContainer .playSelection {
+  background: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.mainContainer .playSelection .playContainer {
+  width: 25%;
+  min-width: 300px;
+  height: 150px;
+  color: #000;
+  border: 2px solid red;
+  outline: 3px solid rgba(0, 0, 0, 0.3);
+  outline-offset: -6px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+}
+.mainContainer .playSelection .playContainer:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+}
+.mainContainer .playSelection .playContainer:hover h3 {
+  color: black;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.mainContainer .playSelection .playContainer h3 {
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: red;
+  text-shadow: 1px 2px 2px black;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.modal {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.modal-close:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=play.css.map */
